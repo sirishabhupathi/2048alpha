@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #faf8ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 40px;
+    color: #776e65;
+}
+
+.container {
+    width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-container {
+    width: 400px;
+    /* You can remove height: 400px if you want the grid to be dynamic based on tile size and gap */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    background-color: #bbada0;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #776e65;
+    aspect-ratio: 1 / 1; /* Key fix: Maintains square aspect ratio */
+}
+
+.tile:empty {
+    background-color: #cdc1b4;
+}
+
+.score-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #bbada0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+.score-container p {
+    margin-right: 10px;
+}
+
+#score {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#new-game-btn {
+    padding: 15px 25px;
+    background-color: #8f7a66;
+    color: #f9f6f2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+#new-game-btn:hover {
+    background-color: #776e65;
+}
+
+/* Tile Colors */
+.tile-2 { background-color: #eee4da; }
+.tile-4 { background-color: #ede0c8; }
+.tile-8 { background-color: #f2b179; color: white;}
+.tile-16 { background-color: #f59563; color: white;}
+.tile-32 { background-color: #f67c5f; color: white;}
+.tile-64 { background-color: #f65e3b; color: white;}
+.tile-128 { background-color: #edcf72; color: white; font-size: 30px;}
+.tile-256 { background-color: #edcc61; color: white; font-size: 30px;}
+.tile-512 { background-color: #edc850; color: white; font-size: 30px;}
+.tile-1024 { background-color: #edc53f; color: white; font-size: 24px;}
+.tile-2048 { background-color: #edc22e; color: white; font-size: 24px;}
+
+/* Media Query for smaller screens */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+    }
+    .grid-container {
+        width: 100%;
+        /* You can remove height: auto if you removed height from .grid-container above*/
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .tile {
+        font-size: 24px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+}
