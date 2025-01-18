@@ -3,20 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2048 Game</title>
+    <title>Play 2048 Online - Free Number Puzzle Game</title>
+    <meta name="description" content="Play the classic 2048 puzzle game online for free. Merge tiles, reach 2048, and challenge your high score. No downloads required.">
+    <meta name="keywords" content="2048, game, puzzle, number game, online game, free game, merge tiles, brain game">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Game",
+      "name": "2048",
+      "description": "Play the classic 2048 puzzle game online for free. Merge tiles, reach 2048, and challenge your high score. No downloads required.",
+      "url": "YOUR_WEBSITE_URL",
+      "image": "YOUR_WEBSITE_URL/screenshot.png",
+      "keywords": "2048, game, puzzle, number game, online game, free game, merge tiles, brain game",
+      "playUrl": "YOUR_WEBSITE_URL",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/OnlineOnly",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <meta property="og:title" content="Play 2048 Online - Free Number Puzzle Game">
+    <meta property="og:description" content="Play the classic 2048 puzzle game online for free. Merge tiles, reach 2048, and challenge your high score. No downloads required.">
+    <meta property="og:image" content="YOUR_WEBSITE_URL/screenshot.png">
+    <meta property="og:url" content="YOUR_WEBSITE_URL">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Play 2048 Online - Free Number Puzzle Game">
+    <meta name="twitter:description" content="Play the classic 2048 puzzle game online for free. Merge tiles, reach 2048, and challenge your high score. No downloads required.">
+    <meta name="twitter:image" content="YOUR_WEBSITE_URL/screenshot.png">
+
     <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">  </head>
 <body>
-    <h1>2048</h1>
-    <div class="container">
-        <div class="grid-container" id="grid-container">
-            </div>
-        <div class="score-container">
-            <p>Score:</p>
-            <span id="score">0</span>
-        </div>
-        <button id="new-game-btn">New Game</button>
-    </div>
+    <header>
+      <h1>2048</h1>
+      <p class="tagline">A fun and addictive number puzzle game.</p>
+    </header>
+
+    <main>
+      <div class="container">
+          <div class="grid-container" id="grid-container">
+          </div>
+          <div class="score-container">
+              <p>Score:</p>
+              <span id="score">0</span>
+          </div>
+          <button id="new-game-btn">New Game</button>
+      </div>
+      <section class="how-to-play">
+        <h2>How to Play</h2>
+        <p>Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one! Try to reach the 2048 tile.</p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Created for fun!</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
